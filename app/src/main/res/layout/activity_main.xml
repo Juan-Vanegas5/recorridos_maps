@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🗺️ Recorridos de Tutoría con Google Maps"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerTipoLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvUbicacionActual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mi ubicación (GPS): sin obtener"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnObtenerUbicacion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="📡 Mi ubicación GPS"/>
+
+        <Button
+            android:id="@+id/btnUbicacionUniversidad"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="🏫 Ver la Universidad"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modo de transporte (alternativas de ruta):"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerModoTransporte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTituloLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Puntos del recorrido:"
+        android:textStyle="bold"
+        android:textColor="#1976D2"/>
+
+    <ListView
+        android:id="@+id/listPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnMasCercano"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Más cercano"/>
+
+    <Button
+        android:id="@+id/btnPlanearRecorrido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧭 Planear recorrido óptimo (seleccionados)"
+        android:backgroundTint="#00796B"
+        android:textColor="#FFFFFF"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#FFFFFF"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvResultadoRecorrido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí aparece el orden del recorrido."
+            android:textSize="13sp"
+            android:textColor="#333333"/>
+    </ScrollView>
+
+</LinearLayout>
